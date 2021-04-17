@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{8BF37BD7-7661-4CCD-B2E9-79BE500A3643}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{8BF37BD7-7661-4CCD-B2E9-79BE500A3643}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{052EDF94-9DF6-49E7-BE5B-6B3AF54816E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{052EDF94-9DF6-49E7-BE5B-6B3AF54816E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{FD9035C8-24BA-44AA-9C7D-AA8E432D18DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{FD9035C8-24BA-44AA-9C7D-AA8E432D18DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleINTERFACE", "ConsoleINTERFACE\ConsoleINTERFACE.csproj", "{3F8E900A-EF9D-4299-934A-4821076162BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleINTERFACE", "ConsoleINTERFACE\ConsoleINTERFACE.csproj", "{3F8E900A-EF9D-4299-934A-4821076162BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{C3C58EE2-2062-4C8D-9D12-989865F96613}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3F8E900A-EF9D-4299-934A-4821076162BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F8E900A-EF9D-4299-934A-4821076162BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F8E900A-EF9D-4299-934A-4821076162BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3C58EE2-2062-4C8D-9D12-989865F96613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3C58EE2-2062-4C8D-9D12-989865F96613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3C58EE2-2062-4C8D-9D12-989865F96613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3C58EE2-2062-4C8D-9D12-989865F96613}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
