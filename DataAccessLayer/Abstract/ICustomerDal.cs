@@ -1,13 +1,11 @@
-﻿using Entities.Concrete;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Entities.Concrete;
 
 namespace DataAccessLayer.Abstract
 {
-    public interface IProductDAL:IEntityRepository<Product>
+    public interface ICustomerDal:IEntityRepository<Customer>
     {
-
-
     }
 }
