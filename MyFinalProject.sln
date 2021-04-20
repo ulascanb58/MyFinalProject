@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entiti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleINTERFACE", "ConsoleINTERFACE\ConsoleINTERFACE.csproj", "{3F8E900A-EF9D-4299-934A-4821076162BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ", "LINQ\LINQ.csproj", "{C3C58EE2-2062-4C8D-9D12-989865F96613}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQ", "LINQ\LINQ.csproj", "{C3C58EE2-2062-4C8D-9D12-989865F96613}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdevEntityFramework", "OdevEntityFramework\OdevEntityFramework.csproj", "{2E258E7B-6FD6-4A5E-963C-F4F2561F9EED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{0D3C9D14-E189-48D8-9F29-F02281BCDA4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{C3C58EE2-2062-4C8D-9D12-989865F96613}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3C58EE2-2062-4C8D-9D12-989865F96613}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3C58EE2-2062-4C8D-9D12-989865F96613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E258E7B-6FD6-4A5E-963C-F4F2561F9EED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E258E7B-6FD6-4A5E-963C-F4F2561F9EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E258E7B-6FD6-4A5E-963C-F4F2561F9EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E258E7B-6FD6-4A5E-963C-F4F2561F9EED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D3C9D14-E189-48D8-9F29-F02281BCDA4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D3C9D14-E189-48D8-9F29-F02281BCDA4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D3C9D14-E189-48D8-9F29-F02281BCDA4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D3C9D14-E189-48D8-9F29-F02281BCDA4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

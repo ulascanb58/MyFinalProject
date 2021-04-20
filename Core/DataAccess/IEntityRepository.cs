@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
-using Entities.Abstract;
+using Core.Entities;
 
-namespace DataAccessLayer.Abstract
+
+namespace Core.DataAccess
 {
     //generic constraint yani generic kısıtlaması.
     //class kullanılması referans tipin olduğunu ifade eder.
-   public interface IEntityRepository<T> where T:class,IEntity,new()
+   public interface IEntityRepository<T> 
+       where T:class,IEntity,new()
    // IEntity : IEntity olabilri veya IEntity implemente eden bir nesne olabilir.
    //new() : newlenebilir olması.
     {
