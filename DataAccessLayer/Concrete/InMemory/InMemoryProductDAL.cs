@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using DataAccessLayer.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace DataAccessLayer.Concrete.InMemory
 {
@@ -75,6 +76,11 @@ namespace DataAccessLayer.Concrete.InMemory
            Product productToDelete = _products.SingleOrDefault(p => p.ProductId == product.ProductId);
             _products.Remove(productToDelete);
 
+        }
+
+        public List<ProductDetailDto> GetProductDetails()
+        {
+            throw new NotImplementedException();
         }
 
         public List<Product> GetAllByCategory(int categoryId)

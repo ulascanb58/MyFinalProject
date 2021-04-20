@@ -11,16 +11,30 @@ namespace ConsoleINTERFACE
         //Open closed : Yeni özellik mevcuttaki koda değişiklik yapmamasını sağlar
         static void Main(string[] args)
         {
-           
-           // ProductTest();
+            // ProductTest();
 
-           CategoryManager categoryManager=new CategoryManager(new EfCategoryDal());
-           foreach (var items in categoryManager.GetAll())
-           {
-               Console.WriteLine(items.CategoryName);
-           }
+           // CategoryTest();
+           ProductTest2();
 
             Console.Read();
+        }
+
+        private static void CategoryTest()
+        {
+            CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
+            foreach (var items in categoryManager.GetAll())
+            {
+                Console.WriteLine(items.CategoryName);
+            }
+        }
+
+        private static void ProductTest2()
+        {
+            ProductManager productManager = new ProductManager(new EfProductDal());
+            foreach (var item in productManager.GetProductDetails())
+            {
+                Console.WriteLine(item.ProductName+ "/" + item.CategoryName);
+            }
         }
 
         private static void ProductTest()

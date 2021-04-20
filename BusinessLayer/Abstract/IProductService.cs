@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace BusinessLayer.Abstract
 {
@@ -12,6 +13,7 @@ namespace BusinessLayer.Abstract
 
        List<Product> GetByUnitPrice(decimal min, decimal max);
 
-       
+       List<ProductDetailDto> GetProductDetails();
+
    }
 }
