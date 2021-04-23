@@ -15,7 +15,8 @@ namespace Core.Utilities.Results
             Message = message;
             
         }
-
+        //:this(success) kullanımı alt taraftaki kodun da çalışmasını sağlar
+        //result constructor'una success parametresini gönder
         public Result(bool success)
         {
             
