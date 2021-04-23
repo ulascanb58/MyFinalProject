@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using BusinessLayer.Abstract;
+using Core.Utilities.Results;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete.InMemory;
 using Entities.Concrete;
@@ -37,6 +38,23 @@ namespace BusinessLayer.Concrete
          public List<ProductDetailDto> GetProductDetails()
          {
              return _productDal.GetProductDetails();
+         }
+
+         public IResult Add(Product product)
+         {
+             
+             if (product.ProductName.Length < 2)
+             {
+                 return new ErrorResult("Ürün ismi en az iki karakter olmalıdır");
+
+             }
+             _productDal.Add(product);
+            return  new SuccessResult("Ürün eklendi");
+         }
+
+         public Product GetById(int productId)
+         {
+             return  _productDal.Get(p=>p.ProductId==productId)
          }
      }
 }
