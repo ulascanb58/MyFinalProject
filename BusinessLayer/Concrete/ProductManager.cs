@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Text;
 using BusinessLayer.Abstract;
 using BusinessLayer.Constants;
+using BusinessLayer.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete.InMemory;
 using Entities.Concrete;
 using Entities.DTOs;
+using FluentValidation;
 
 namespace BusinessLayer.Concrete
 {
@@ -51,14 +55,17 @@ namespace BusinessLayer.Concrete
              return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductDetails());
         }
 
+
+        [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
          {
-             
-             if (product.ProductName.Length < 2)
-             {
-                 return new ErrorResult(Messages.ProductNameInvalid);
+            //validation
 
-             }
+
+
+           // ValidationTool.Validate(new ProductValidator(), product); 
+
+             
              _productDal.Add(product);
             return  new SuccessResult(Messages.ProductAdded);
          }
