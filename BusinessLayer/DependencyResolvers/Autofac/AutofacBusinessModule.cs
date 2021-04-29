@@ -4,6 +4,7 @@ using System.Text;
 using Autofac;
 using Autofac.Extras.DynamicProxy;
 using BusinessLayer.Abstract;
+using BusinessLayer.CCS;
 using BusinessLayer.Concrete;
 using Castle.DynamicProxy;
 using Core.Utilities.Interceptors;
@@ -20,6 +21,11 @@ namespace BusinessLayer.DependencyResolvers.Autofac
             //startup da yazdığımız kodla aynı işlevi sağlar
             builder.RegisterType<ProductManager>().As<IProductService>().SingleInstance(); //tek bir instance
             builder.RegisterType<EfProductDal>().As<IProductDAL>().SingleInstance();
+
+
+            builder.RegisterType<CategoryManager>().As<ICategoryService>().SingleInstance();
+            builder.RegisterType<EfCategoryDal>().As<ICategoryDAL>().SingleInstance();
+
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 

@@ -12,5 +12,7 @@ namespace BusinessLayer.Constants
         public static string ProductNameInvalid = "Ürün ismi geçersiz";
         public static string MaintenanceTime = "Server şuan bakımda";
         public static string ProductsListed = "Ürünler başarı ile listelendi";
+        public static string ProductCountOfCategoryError = "Kategori limitine erişildi";
+        public static string ProductNameAlreadyExists = "Böyle bir ürün ismi mevcut";
     }
 }

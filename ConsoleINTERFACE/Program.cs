@@ -30,7 +30,7 @@ namespace ConsoleINTERFACE
 
         private static void ProductTest2()
         {
-            
+           /* 
             ProductManager productManager = new ProductManager(new EfProductDal());
             var result = productManager.GetProductDetails();
             if (result.Success == true)
@@ -45,12 +45,12 @@ namespace ConsoleINTERFACE
                 {
                     Console.WriteLine(result.Message);
                 }
-            }
+            }*/
           
         }
 
         private static void ProductTest()
-        {
+        {/*
             ProductManager productManager = new ProductManager(new EfProductDal());
             foreach (var item in productManager.GetByUnitPrice(0, 10).Data)
             {

@@ -20,6 +20,7 @@ namespace BusinessLayer.Abstract
        //IResult voidler için kullanılır
        IResult Add(Product product);
 
+        IResult Update(Product product);
        IDataResult<Product> GetById(int productId);
    }
 }
