@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using BusinessLayer.Abstract;
+using BusinessLayer.BusinessAspects.Autofac;
 using BusinessLayer.CCS;
 using BusinessLayer.Constants;
 using BusinessLayer.ValidationRules.FluentValidation;
@@ -62,13 +63,13 @@ namespace BusinessLayer.Concrete
             return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductDetails());
         }
 
+        [SecuredOperation("product.add,admin")]
 
         [ValidationAspect(typeof(ProductValidator))]
 
-
         public IResult Add(Product product)
         {
-            IResult result = BusinessRules.Run(CheckIfProductNameExist(product.ProductName), CheckIfProductCountOfCategoryCorrect(product.CategoryId),CheckIfCategoryLimitExcedeed());
+            IResult result = BusinessRules.Run(CheckIfProductNameExist(product.ProductName), CheckIfProductCountOfCategoryCorrect(product.CategoryId), CheckIfCategoryLimitExcedeed());
             //validation
 
             if (result != null)
@@ -131,7 +132,7 @@ namespace BusinessLayer.Concrete
         private IResult CheckIfCategoryLimitExcedeed()
         {
             var result = _categoryService.GetAll();
-            if(result.Data.Count>15)
+            if (result.Data.Count > 15)
             {
                 return new ErrorResult();
             }
