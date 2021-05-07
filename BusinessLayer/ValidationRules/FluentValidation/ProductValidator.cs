@@ -14,7 +14,7 @@ namespace BusinessLayer.ValidationRules.FluentValidation
             RuleFor(p => p.ProductName).MinimumLength(2).WithMessage(Messages.ProductNameInvalid);
             RuleFor(p => p.ProductName).NotEmpty();
             RuleFor(p => p.UnitPrice).NotEmpty();
-            RuleFor(p => p.ProductName).Must(StartWithA).WithMessage(Messages.ProductNameInvalid);
+           // RuleFor(p => p.ProductName).Must(StartWithA).WithMessage(Messages.ProductNameInvalid);
             RuleFor(p => p.UnitPrice).GreaterThan(1);
             RuleFor(p => p.UnitPrice).GreaterThanOrEqualTo(10).When(p => p.CategoryId == 1);
        
