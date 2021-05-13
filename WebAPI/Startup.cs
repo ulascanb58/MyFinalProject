@@ -35,7 +35,7 @@ namespace WebApi
         {
             services.AddControllers();
 
-
+            services.AddCors();
            
             var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
 
@@ -66,6 +66,7 @@ namespace WebApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(builder=>builder.WithOrigins("http://localhost:3535").AllowAnyHeader());
             app.UseHttpsRedirection();
 
             app.UseRouting();

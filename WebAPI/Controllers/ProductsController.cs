@@ -45,10 +45,27 @@ namespace WebAPI.Controllers
 
             if (result.Success == true)
             {
-                return Ok(result.Data);
+                return Ok(result);
             }
 
-            return BadRequest(result.Message);
+            return BadRequest(result);
+
+        }
+
+
+
+        [HttpGet("getbycategory")]
+        public IActionResult GetByCategory(int categoryId)
+        {
+
+            var result = _productService.GetAllByCategoryId(categoryId);
+
+            if (result.Success == true)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
 
         }
 
@@ -63,5 +80,6 @@ namespace WebAPI.Controllers
 
             return BadRequest(result);
         }
+
     }
 }
