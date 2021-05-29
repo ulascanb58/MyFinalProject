@@ -68,7 +68,7 @@ namespace BusinessLayer.Concrete
             return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductDetails());
         }
 
-        [SecuredOperation("user")]
+        //[SecuredOperation("user")]
        // [TransactionScopeAspect]
         [ValidationAspect(typeof(ProductValidator))]
         [CacheRemoveAspect("IProductService.Get")]
